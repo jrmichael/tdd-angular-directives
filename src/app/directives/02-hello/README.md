@@ -9,4 +9,10 @@ Use it on app.html page.
 Read section *How directives are compiled* from: 
 [https://docs.angularjs.org/guide/compiler](https://docs.angularjs.org/guide/compiler)
 
-Based on documentation try to write a jasmine test to see if directive is working. 
+Based on documentation try to write a jasmine test to see if directive is displaying text provided on scope.
+
+### Step 3
+Write a test to check binding `name` argument. Check if when `name` is changed on scope - change is reflected in directive.  
+Heads up: Check out `$apply` function.
+
+
