@@ -1,5 +1,7 @@
 ### Step 1  
-Create a *Hola* directive that will display text "Hello [name]!" in a H1 element in spanish. Where name will be taken from directive argument.
+Create a *Hola* directive that will display text "Hello [name]!" in a H1 element in spanish.   
+Where name will be taken from directive argument:
+`````<hola name="{{app.name}}></hola>"`````  
 Use it on app.html page.
 
 ### Step 2

@@ -22,8 +22,7 @@ function listFiles() {
       path.join(conf.paths.src, '/app/**/*.js'),
       path.join(conf.paths.src, '/**/*.spec.js'),
       path.join(conf.paths.src, '/**/*.mock.js'),
-    ])
-    .concat(pathSrcHtml);
+    ]);
 
   var files = patterns.map(function(pattern) {
     return {
@@ -67,8 +66,7 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-angular-filesort',
       'karma-coverage',
-      'karma-jasmine',
-      'karma-ng-html2js-preprocessor'
+      'karma-jasmine'
     ],
 
     coverageReporter: {
@@ -89,7 +87,7 @@ module.exports = function(config) {
   // running a single test or not
   configuration.preprocessors = {};
   pathSrcHtml.forEach(function(path) {
-    configuration.preprocessors[path] = ['ng-html2js'];
+    configuration.preprocessors[path] = [];
   });
 
   // This block is needed to execute Chrome on Travis
