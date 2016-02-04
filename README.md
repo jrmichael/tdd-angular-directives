@@ -1,7 +1,7 @@
-tdd-angular-seed
+tdd-angular-directives
 ================
 
-Seed project for "TDD in AngularJS" workshop.
+Excercises for "TDD in AngularJS" workshop.
 
 setup
 -----
