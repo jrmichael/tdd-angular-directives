@@ -16,6 +16,16 @@ describe('Hola directive', function() {
     expect(element.html()).toContain("Hola mundo!");
   });
 
+  it('should display actual name', function() {
+    scope.name = 'mundo';
+    var element = create('<hola name="{{name}}"></hola>');
+
+    scope.name = 'amigos';
+    scope.$apply();
+
+    expect(element.html()).toContain("Hola amigos!");
+  });
+
   var create = function(html) {
     // Step 1: parse HTML into DOM element
     var element = angular.element(html);

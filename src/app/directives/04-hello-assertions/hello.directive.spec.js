@@ -13,7 +13,7 @@ describe('Ahoj directive', function () {
 
     var element = create('<ahoj name="{{name}}"></ahoj>');
 
-    expect(element.html()).toContain("Ahoj svet!");
+    expect(element).toContainText("Ahoj svet!");
   });
 
 

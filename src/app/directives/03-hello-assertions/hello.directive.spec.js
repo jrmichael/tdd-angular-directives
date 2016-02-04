@@ -13,7 +13,7 @@ describe('Ciao directive', function () {
 
     var element = create('<ciao name="{{name}}"></ciao>');
 
-    expect(element.html()).toContain("Ciao mondo!");
+    expect(element).toContainText("Ciao mondo!");
   });
 
   it('should display text in Blue color', function () {
