@@ -11,6 +11,8 @@ Read section *How directives are compiled* from:
 
 Based on documentation try to write a jasmine test to see if directive is displaying
  text provided on scope.
+`Heads up`: more info here
+ [https://code.angularjs.org/1.4.2/docs/guide/unit-testing]( https://code.angularjs.org/1.4.2/docs/guide/unit-testing )
 
 ### Step 3
 Write a test to check binding `name` argument. Check if when `name` is changed on scope
