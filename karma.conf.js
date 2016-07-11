@@ -21,7 +21,7 @@ function listFiles() {
       path.join(conf.paths.src, '/app/**/*.module.js'),
       path.join(conf.paths.src, '/app/**/*.js'),
       path.join(conf.paths.src, '/**/*.spec.js'),
-      path.join(conf.paths.src, '/**/*.mock.js'),
+      path.join(conf.paths.src, '/**/*.mock.js')
     ]);
 
   var files = patterns.map(function(pattern) {
@@ -66,7 +66,8 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-angular-filesort',
       'karma-coverage',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-babel-preprocessor'
     ],
 
     coverageReporter: {
@@ -86,6 +87,7 @@ module.exports = function(config) {
   // It was not possible to do it there because karma doesn't let us now if we are
   // running a single test or not
   configuration.preprocessors = {};
+  configuration.preprocessors[path.join(conf.paths.src, '/app/**/*.js')] = ['babel'];
   pathSrcHtml.forEach(function(path) {
     configuration.preprocessors[path] = [];
   });
